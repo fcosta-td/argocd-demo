@@ -7,7 +7,7 @@ ARG SOPS_PGP_FP="013D26E064C0758596AE93A986A1183C1DFC20F4"
 ENV SOPS_PGP_FP=${SOPS_PGP_FP}
 
 USER root
-COPY helm-wrapper.sh /usr/local/bin/
+COPY --chown=argocd:argocd helm-wrapper.sh /usr/local/bin/
 RUN apt-get update && \
     apt-get install -y \
     curl \
@@ -24,7 +24,7 @@ RUN apt-get update && \
     chmod +x helm helm2
 
 # helm secrets plugin should be installed as user argocd or it won't be found
-USER argocd
+USER 999
 COPY --chown=argocd:argocd argocd_demo_gpg.asc /home/argocd/gpg/gpg.asc
 RUN /usr/local/bin/_helm plugin install https://github.com/jkroepke/helm-secrets --version ${HELM_SECRETS_VERSION}
 ENV HELM_PLUGINS="/home/argocd/.local/share/helm/plugins/"

@@ -68,7 +68,6 @@ kubectl port-forward svc/argocd-server -n argocd 8080:443
 ### Login Using The CLI
 For Argo 2.x, follow these steps:
 ```
-Method 1:
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
 Using the username admin and the password from above, login to Argo CD's IP or hostname:
@@ -156,7 +155,7 @@ or you can deploy via argocd cli
 This example uses a helm chart template combined with kustomize.
 You can deploy it with kubectl
 ```
-kubectl apply -f ~/Documents/git/argocd/applications/kustoumizehelm.yaml
+kubectl apply -f ~/Documents/git/argocd/applications/kustomizehelm.yaml
 ```
 
 Create template from helm
