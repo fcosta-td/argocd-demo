@@ -1,4 +1,6 @@
 grafana:
+  rbac:
+    create: false
   adminUser: admin
   adminPassword: admin
   image:
