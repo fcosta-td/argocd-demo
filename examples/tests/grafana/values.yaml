@@ -1,4 +1,6 @@
 grafana:
+  adminUser: admin
+  adminPassword: admin
   image:
     repository: grafana/grafana
     tag: 7.3.7
