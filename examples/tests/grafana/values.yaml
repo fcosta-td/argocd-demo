@@ -2,3 +2,8 @@ grafana:
   image:
     repository: grafana/grafana
     tag: 7.3.7
+  sidecar:
+    image:
+      repository: kiwigrid/k8s-sidecar
+      tag: 1.1.0
+      sha: ""
