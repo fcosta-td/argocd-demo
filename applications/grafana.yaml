@@ -13,7 +13,7 @@ spec:
   source:
     helm:
       version: v3
-    path: examples/helm/trinodb/cluster_1/stg
+    path: examples/tests/grafana
     repoURL: https://github.com/fcosta-td/argocd.git
     targetRevision: main
   syncPolicy:
