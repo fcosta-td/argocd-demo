@@ -7,3 +7,22 @@ grafana:
       repository: kiwigrid/k8s-sidecar
       tag: 1.1.0
       sha: ""
+    imagePullPolicy: IfNotPresent
+    skipTlsVerify: true
+    enableUniqueFilenames: false
+    dashboards:
+      enabled: true
+      SCProvider: true
+      label: grafana_dashboard
+      folder: /tmp/dashboards
+      defaultFolderName: null
+      searchNamespace: ALL
+      folderAnnotation: null
+      provider:
+        name: sidecarProvider
+        orgid: 1
+        folder: ''
+        type: file
+        disableDelete: false
+        allowUiUpdates: true
+        foldersFromFilesStructure: false
