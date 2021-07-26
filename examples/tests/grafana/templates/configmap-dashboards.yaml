@@ -8,6 +8,7 @@ metadata:
   name: grafana-dashboard-{{ trimSuffix ".json" (base $path) }}
   labels:
     grafana_dashboard: "1"
+  annotations:
     grafana_folder: {{ base (dir $path) }}
 data:
   {{ base $path }}: |-
