@@ -8,8 +8,8 @@ grafana:
     tag: 7.3.7
   sidecar:
     image:
-      repository: kiwigrid/k8s-sidecar
-      tag: 1.1.0
+      repository: quay.io/kiwigrid/k8s-sidecar
+      tag: 1.12.2
       sha: ""
     imagePullPolicy: IfNotPresent
     skipTlsVerify: true
