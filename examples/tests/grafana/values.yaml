@@ -31,7 +31,7 @@ grafana:
         allowUiUpdates: true
         foldersFromFilesStructure: true
 
-  datasources: {}
+  datasources:
     datasources.yaml:
       apiVersion: 1
         datasources:
