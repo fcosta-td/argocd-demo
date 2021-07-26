@@ -2,7 +2,7 @@ grafana:
   rbac:
     create: true
   adminUser: admin
-  adminPassword: admin
+  adminPassword: teste123.
   image:
     repository: grafana/grafana
     tag: 7.3.7
@@ -35,8 +35,16 @@ grafana:
     datasources.yaml:
       apiVersion: 1
       datasources:
-      - name: Prometheus
+      - name: prometheus
         type: prometheus
-        url: http://prometheus-prometheus-server
         access: proxy
+        orgId: 1
+        url: http://localhost:11902/
         isDefault: true
+        version: 1
+        editable: false
+      - name: cloudwatch
+        type: cloudwatch
+        editable: false
+        jsonData:
+          defaultRegion: "dummy"
