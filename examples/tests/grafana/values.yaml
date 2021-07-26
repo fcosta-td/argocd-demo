@@ -21,7 +21,7 @@ grafana:
       folder: /tmp/dashboards
       defaultFolderName: null
       searchNamespace: ALL
-      folderAnnotation: null
+      folderAnnotation: grafana_folder
       provider:
         name: sidecarProvider
         orgid: 1
@@ -29,4 +29,4 @@ grafana:
         type: file
         disableDelete: false
         allowUiUpdates: true
-        foldersFromFilesStructure: false
+        foldersFromFilesStructure: true
