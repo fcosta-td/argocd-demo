@@ -30,3 +30,13 @@ grafana:
         disableDelete: false
         allowUiUpdates: true
         foldersFromFilesStructure: true
+
+  datasources: {}
+    datasources.yaml:
+      apiVersion: 1
+        datasources:
+        - name: Prometheus
+          type: prometheus
+          url: http://127.0.0.1:9090
+          access: proxy
+          isDefault: true
