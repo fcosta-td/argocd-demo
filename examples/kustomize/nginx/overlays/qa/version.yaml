@@ -6,5 +6,5 @@ spec:
   template:
     spec:
       containers:
-      - image: nginx:1.18.0-alpine
+      - image: nginx:1.17.0-alpine
         name: nginx
